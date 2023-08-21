@@ -34,9 +34,7 @@ bool View::show_window() {
     }
        
     ImGui::End();
-
-    
-    return true;
+    return clicked;
 }
 
 
