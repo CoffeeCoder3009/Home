@@ -1,4 +1,3 @@
-
 #include "homeGUI.h"
 #include "imgui.h"
 #include "WindowDrawer.h"
@@ -336,26 +335,32 @@ int homeGUI::run()
   /*  io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
     io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
     io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);*/
-   //ImFont* font = io.Fonts->AddFontFromFileTTF("C:\Project\Home\Home\static\OpenSans_Condensed-Bold.ttf", 18.0f);
 
-    
-        ImFont* font = io.Fonts->AddFontFromFileTTF("C:\\Home\\Home\\static\\OpenSans-SemiBold.ttf", 16.0f);
-      
 
-        IM_ASSERT(font != nullptr);
-        
+    std::filesystem::path currentDir = std::filesystem::current_path();
 
-        // Apply changes to the font texture
-        ImGui::GetIO().Fonts->Build();
+    std::string path = currentDir.string() + "\\static\\OpenSans_Condensed-Bold.ttf";
 
-    try {
-        
-        ImGui::GetIO().FontDefault = font;
-    }
-    catch (std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
-    
+    ImFont* font = io.Fonts->AddFontFromFileTTF(path.c_str(), 18.0f);
+
+    std::cout<<path<<std::endl;
+    //    ImFont* font = io.Fonts->AddFontFromFileTTF($(ProjectDir)static+"/OpenSans-SemiBold.ttf", 16.0f);
+    //  
+
+    //    IM_ASSERT(font != nullptr);
+    //    
+
+    //    // Apply changes to the font texture
+    //    ImGui::GetIO().Fonts->Build();
+
+    //try {
+    //    
+    //    ImGui::GetIO().FontDefault = font;
+    //}
+    //catch (std::exception& e) {
+    //    std::cout << e.what() << std::endl;
+    //}
+    //
 
     // Our state
     bool show_demo_window = true;

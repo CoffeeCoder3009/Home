@@ -6,7 +6,17 @@
 #include <cmath> 
 #include <stack>
 #include <sstream>
-# 
+
+#include "Node.h"
+
+
+#include <iostream>
+#include <cctype>
+
+
+
+#include <thread> 
+
 
 
 class View {

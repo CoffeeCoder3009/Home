@@ -2,6 +2,7 @@
 
 
 
+#define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx12.h"
@@ -10,7 +11,7 @@
 #include <tchar.h>
 #include "Config.h"
 #include <iostream>
-
+#include <filesystem>
 
 
 #ifdef _DEBUG
